@@ -7,15 +7,16 @@
 
             Contexto: Dado que eu acesse a página de checkout do portal EBAC-SHOP
 
-            Cenário: Deve ser cadastrado com todos os dados obrigatórios, marcado com asteriscos
-            Quando eu acessar a página para informar os dados para cadastro
-            E algum campo de "dado obrigatorio" ficar vazio
-            Então deve exibir uma mensagem: "Favor preencher informação"
+             Cenário : Deve ser cadastrado com todos os dado asters obrigatórios, marcadosom asteristico
+            Quando eu acesso uma página para informar os dados para cadastro
+            E algum campo de "dado obrigatório"  <NOME> , <SOBRENOME> , <PAIS> , <ENDERECO> , <CIDADE> , <CEP> , <TELEFONE> ficar vazio
+            Então deve exibir uma <MENSAGEM> de alerta
 
             Exemplo:
-            | NOME | SOBRENOME | PAÍS   | ENDEREÇO      | CIDADE   | CEP        | TELEFONE  |
-            | João |           | Brasil | Rua 3 a       | Brasilia | 710000-000 | 8965-4785 |
-            |      |           | Brasil | Av brasil 345 | Jurere   | 25000-000  | 2547-6589 |
+
+            | NOME | SOBRENOME | PAIS | ENDERECO | CIDADE | CEP | TELEFONE | MENSAGEM
+            | João | | Brasil | Rua 3a | Brasília | 710000-000 | 8965-4785 |Favor preencher campo vazio
+            | | | Brasil | Av brasil 345 | Jurerê | 25000-000 | 2547-6589 |Favor preencher campo    vazio
             
             Cenário: Não deve permitir campo e-mail com formato inválido. Sistema deve inserir uma mensagem de erro
             Quando eu digitar o <usuário>
