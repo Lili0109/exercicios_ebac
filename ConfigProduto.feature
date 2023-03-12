@@ -9,10 +9,18 @@
             Contexto: Dado que eu acesse a página de produtos do portal EBAC-SHOP
 
             Cenário: Seleções de cor, tamanho e quantidade devem ser obrigatórios
-            Quando eu abrir o produto escolhido
-            E selecionar tamanho e quantidade
-            Então deve exibir uma mensagem de alerta "Favor selecionar a cor do produto"
+            Quando eu abrir o produto escolhido Quando eu seleciono um <cor>
+            E selecionar <tamanho>
+            E <quantidade> do produto
+            Então deve exibir uma mensagem "Produto enviado para o carrinho"
 
+            Exemplos :
+
+            | cor   | tamanho | quantidade|
+            | Azul  | P       | 2         |
+            | Rosa  | M       | 1         |
+            | Verde | G       | 1         |
+           
             Cenário: Deve permitir apenas 10 produtos por venda
             Quando eu selecionar a <quantidade> de produtos
             E incluir no carrinho de compras
